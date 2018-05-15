@@ -18,7 +18,7 @@ public class SomatoriaTest {
 
     public SomatoriaTest() {
     }
-
+/*
     @Test
     public void somaDeFatoriais2() {
         MathOps mathOpsMock = mock(MathOps.class);
@@ -42,6 +42,33 @@ public class SomatoriaTest {
         Somatoria s = new Somatoria(mathOpsMock);
         assertEquals(3628800, s.somaDeFatoriais(numeros, primoMock));
     }
+*/
+    @Test
+    public void somaDeFatoriais5() {
+        MathOps mathOpsMock = mock(MathOps.class);
+        Primo primoMock = mock(Primo.class);
 
+        int[] numeros = {3, 4, 4, 5};
 
+        when(primoMock.ehPrimo(3))
+                .thenReturn(true);
+
+        when(primoMock.ehPrimo(4))
+                .thenReturn(false);
+
+        when(primoMock.ehPrimo(5))
+                .thenReturn(true);
+
+        when(mathOpsMock.fatorial(3))
+                .thenReturn(6);
+
+        when(mathOpsMock.fatorial(4))
+                .thenReturn(24);
+
+        when(mathOpsMock.fatorial(5))
+                .thenReturn(120);
+
+        Somatoria s = new Somatoria(mathOpsMock);
+        assertEquals(48, s.somaDeFatoriais(numeros, primoMock));
+    }
 }
