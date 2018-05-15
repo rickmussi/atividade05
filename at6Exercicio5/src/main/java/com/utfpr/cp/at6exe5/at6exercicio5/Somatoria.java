@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package atv6exercicio5;
+package com.utfpr.cp.at6exe5.at6exercicio5;
 
 /**
  *
@@ -27,10 +27,10 @@ public class Somatoria {
         for (int i = 0; i < numeros.length; i++) {
             int numero = numeros[i];            
             if (!p.ehPrimo(numero)) {            
-                soma += numero;
+                soma += mathOps.fatorial(numero);;
             }
-        }
-        soma = mathOps.fatorial(0);
+        }        
         return soma;
+        //return 0; // não entendi esse retorno 0(zero) a função sempre retornaria 0 na somatoria
     }
 }

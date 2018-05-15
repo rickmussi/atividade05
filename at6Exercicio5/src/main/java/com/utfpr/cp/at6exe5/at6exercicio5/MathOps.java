@@ -3,19 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package atv6exercicio5;
+package com.utfpr.cp.at6exe5.at6exercicio5;
 
 /**
  *
  * @author Mussi
  */
-public class principal {
+public interface MathOps {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+    public int fatorial(int n);
 }
